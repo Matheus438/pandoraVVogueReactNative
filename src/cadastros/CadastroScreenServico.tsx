@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Image, StyleSheet, Text, TextInput, Touchable, TouchableOpacity, View } from "react-native";
+import { Image, ScrollView, StyleSheet, Text, TextInput, Touchable, TouchableOpacity, View } from "react-native";
 
 function CadastroServicoScreem(): JSX.Element{
 
@@ -20,6 +20,7 @@ function CadastroServicoScreem(): JSX.Element{
     }
 
     return(
+        <ScrollView contentContainerStyle={styles.scrollContainer}>
         <View style={styles.container}>
             <Image
             style={styles.logo}
@@ -62,6 +63,7 @@ function CadastroServicoScreem(): JSX.Element{
                 
             </View>
         </View>
+        </ScrollView>
     );
 }
 
@@ -71,6 +73,12 @@ const styles =StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: '#ACA3A9'
+    },
+    scrollContainer: {
+        flexGrow: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: '#4d663a'
     },
     logo: {
         width: 450,
